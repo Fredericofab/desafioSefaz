@@ -2,7 +2,6 @@ package aplicacao;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 import dao.CargoDao;
 import dao.FabricaDeDao;
@@ -10,7 +9,7 @@ import entidades.Cargo;
 
 public class TesteCargo {
 
-	public static void main(String[] args) {
+	public static void testarCargo() {
 
 		Integer codCargo;
 		Cargo cargo;
