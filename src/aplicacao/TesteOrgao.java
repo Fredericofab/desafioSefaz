@@ -19,19 +19,19 @@ public class TesteOrgao {
 		System.out.println("colocar um Breakpoint Aqui");
 		
 		System.out.println("teste inserir Orgao");
-		orgao = new Orgao(10,"teste Orgao");
+		orgao = new Orgao(19,"teste Orgao");
 		orgaoDao.inserir(orgao);
 		
 		System.out.println("teste atualizar Orgao");
-		orgao = new Orgao(10,"novo nome");
+		orgao = new Orgao(19,"novo nome");
 		orgaoDao.atualizar(orgao);
 		
 		System.out.println("teste deletar Orgao");
-		codOrgao = 10;
+		codOrgao = 19;
 		orgaoDao.deletar(codOrgao);
 		
 		System.out.println("teste pesquisar Orgao");
-		codOrgao = 1;
+		codOrgao = 11;
 		orgao = orgaoDao.pesquisar(codOrgao);
 		System.out.println(orgao);
 		

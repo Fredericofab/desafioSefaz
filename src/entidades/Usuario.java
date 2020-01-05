@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Usuario implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private Double cpf;
+	private Long cpf;
 	private String nome;
 	private Integer ramal;
 	private String email;
@@ -15,7 +15,7 @@ public class Usuario implements Serializable {
 	
 	public Usuario() {
 	}
-	public Usuario(Double cpf, String nome, Integer ramal, String email, Cargo cargo, Orgao orgao) {
+	public Usuario(Long cpf, String nome, Integer ramal, String email, Cargo cargo, Orgao orgao) {
 		this.cpf = cpf;
 		this.nome = nome;
 		this.ramal = ramal;
@@ -24,10 +24,10 @@ public class Usuario implements Serializable {
 		this.orgao = orgao;
 	}
 
-	public Double getCpf() {
+	public Long getCpf() {
 		return cpf;
 	}
-	public void setCpf(Double cpf) {
+	public void setCpf(Long cpf) {
 		this.cpf = cpf;
 	}
 	public String getNome() {

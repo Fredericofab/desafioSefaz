@@ -101,7 +101,7 @@ public class SistemaDaoJDBC implements SistemaDao {
 		ResultSet rs = null;
 		List<Sistema> lista = new ArrayList<Sistema>();
 		try {
-			st = conexao.prepareStatement("select * from SISTEMA ");
+			st = conexao.prepareStatement("select * from SISTEMA order by CD_SISTEMA ");
 			rs = st.executeQuery();
 			while (rs.next()) {
 				Sistema cargo = instanciarSistema(rs);

@@ -8,8 +8,8 @@ public interface UsuarioDao {
 
 	void inserir(Usuario objeto);
 	void atualizar(Usuario objeto);
-	void deletar(Integer codUsuario);
-	Usuario pesquisar(Integer codUsuario);
+	void deletar(Long cpf);
+	Usuario pesquisar(Long cpf);
 	List<Usuario> listarTodos();
 
 }

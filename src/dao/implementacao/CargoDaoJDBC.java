@@ -101,7 +101,7 @@ public class CargoDaoJDBC implements CargoDao {
 		ResultSet rs = null;
 		List<Cargo> lista = new ArrayList<Cargo>();
 		try {
-			st = conexao.prepareStatement("select * from CARGO ");
+			st = conexao.prepareStatement("select * from CARGO order by CD_CARGO");
 			rs = st.executeQuery();
 			while (rs.next()) {
 				Cargo cargo = instanciarCargo(rs);

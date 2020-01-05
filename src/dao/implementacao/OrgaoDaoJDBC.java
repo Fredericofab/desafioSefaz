@@ -99,7 +99,7 @@ public class OrgaoDaoJDBC implements OrgaoDao {
 		ResultSet rs = null;
 		List<Orgao> lista = new ArrayList<Orgao>();
 		try {
-			st = conexao.prepareStatement("select * from ORGAO ");
+			st = conexao.prepareStatement("select * from ORGAO order by CD_ORGAO ");
 			rs = st.executeQuery();
 			while (rs.next()) {
 				Orgao cargo = instanciarOrgao(rs);

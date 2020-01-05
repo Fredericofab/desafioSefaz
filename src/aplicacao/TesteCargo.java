@@ -19,15 +19,15 @@ public class TesteCargo {
 		System.out.println("colocar um Breakpoint Aqui");
 		
 		System.out.println("teste inserir Cargo");
-		cargo = new Cargo(10,"teste Cargo");
+		cargo = new Cargo(9,"teste Cargo");
 		cargoDao.inserir(cargo);
 		
 		System.out.println("teste atualizar Cargo");
-		cargo = new Cargo(10,"novo nome");
+		cargo = new Cargo(9,"novo nome");
 		cargoDao.atualizar(cargo);
 		
 		System.out.println("teste deletar Cargo");
-		codCargo = 10;
+		codCargo = 9;
 		cargoDao.deletar(codCargo);
 		
 		System.out.println("teste pesquisar Cargo");
