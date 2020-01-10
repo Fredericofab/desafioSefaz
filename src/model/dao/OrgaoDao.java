@@ -1,7 +1,8 @@
-package dao;
+package model.dao;
 
 import java.util.List;
-import entidades.Orgao;
+
+import model.entities.Orgao;
 
 public interface OrgaoDao {
 

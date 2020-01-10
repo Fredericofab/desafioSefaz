@@ -1,4 +1,4 @@
-package dao.implementacao;
+package model.dao.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,10 +7,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import dao.SistemaDao;
 import db.DB;
 import db.DbException;
-import entidades.Sistema;
+import model.dao.SistemaDao;
+import model.entities.Sistema;
 
 public class SistemaDaoJDBC implements SistemaDao {
 

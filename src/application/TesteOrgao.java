@@ -1,11 +1,11 @@
-package aplicacao;
+package application;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import dao.OrgaoDao;
-import dao.FabricaDeDao;
-import entidades.Orgao;
+import model.dao.DaoFabrica;
+import model.dao.OrgaoDao;
+import model.entities.Orgao;
 
 public class TesteOrgao {
 
@@ -14,7 +14,7 @@ public class TesteOrgao {
 		Integer codOrgao;
 		Orgao orgao;
 		List<Orgao> lista = new ArrayList<Orgao>();
-		OrgaoDao orgaoDao = FabricaDeDao.criarOrgaoDao();
+		OrgaoDao orgaoDao = DaoFabrica.criarOrgaoDao();
 
 		System.out.println("colocar um Breakpoint Aqui");
 		

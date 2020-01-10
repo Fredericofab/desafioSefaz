@@ -1,8 +1,8 @@
-package dao;
+package model.dao;
 
 import java.util.List;
 
-import entidades.Sistema;
+import model.entities.Sistema;
 
 public interface SistemaDao {
 

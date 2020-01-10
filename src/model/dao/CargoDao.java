@@ -1,7 +1,8 @@
-package dao;
+package model.dao;
 
 import java.util.List;
-import entidades.Cargo;
+
+import model.entities.Cargo;
 
 public interface CargoDao {
 

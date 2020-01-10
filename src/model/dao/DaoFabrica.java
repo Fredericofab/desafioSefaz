@@ -1,12 +1,12 @@
-package dao;
+package model.dao;
 
-import dao.implementacao.CargoDaoJDBC;
-import dao.implementacao.OrgaoDaoJDBC;
-import dao.implementacao.SistemaDaoJDBC;
-import dao.implementacao.usuarioDaoJDBC;
 import db.DB;
+import model.dao.impl.CargoDaoJDBC;
+import model.dao.impl.OrgaoDaoJDBC;
+import model.dao.impl.SistemaDaoJDBC;
+import model.dao.impl.usuarioDaoJDBC;
 
-public class FabricaDeDao {
+public class DaoFabrica {
 
 	public static CargoDao criarCargoDao() {
 		return new CargoDaoJDBC(DB.getConexao());

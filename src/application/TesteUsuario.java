@@ -1,13 +1,13 @@
-package aplicacao;
+package application;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import dao.FabricaDeDao;
-import dao.UsuarioDao;
-import entidades.Cargo;
-import entidades.Orgao;
-import entidades.Usuario;
+import model.dao.DaoFabrica;
+import model.dao.UsuarioDao;
+import model.entities.Cargo;
+import model.entities.Orgao;
+import model.entities.Usuario;
 
 public class TesteUsuario {
 
@@ -17,7 +17,7 @@ public class TesteUsuario {
 		Cargo cargo;
 		Orgao orgao;
 		List<Usuario> lista = new ArrayList<Usuario>();
-		UsuarioDao usuarioDao = FabricaDeDao.criarUsuarioDao();
+		UsuarioDao usuarioDao = DaoFabrica.criarUsuarioDao();
 
 		System.out.println("colocar um Breakpoint Aqui");
 		

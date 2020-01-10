@@ -1,11 +1,11 @@
-package aplicacao;
+package application;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import dao.FabricaDeDao;
-import dao.SistemaDao;
-import entidades.Sistema;
+import model.dao.DaoFabrica;
+import model.dao.SistemaDao;
+import model.entities.Sistema;
 
 public class TesteSistema {
 
@@ -14,7 +14,7 @@ public class TesteSistema {
 		Integer codSistema;
 		Sistema sistema;
 		List<Sistema> lista = new ArrayList<Sistema>();
-		SistemaDao sistemaDao = FabricaDeDao.criarSistemaDao();
+		SistemaDao sistemaDao = DaoFabrica.criarSistemaDao();
 
 		System.out.println("colocar um Breakpoint Aqui");
 		

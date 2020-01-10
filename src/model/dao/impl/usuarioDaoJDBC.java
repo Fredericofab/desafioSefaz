@@ -1,4 +1,4 @@
-package dao.implementacao;
+package model.dao.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,12 +9,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import dao.UsuarioDao;
 import db.DB;
 import db.DbException;
-import entidades.Cargo;
-import entidades.Orgao;
-import entidades.Usuario;
+import model.dao.UsuarioDao;
+import model.entities.Cargo;
+import model.entities.Orgao;
+import model.entities.Usuario;
 
 public class usuarioDaoJDBC implements UsuarioDao {
 

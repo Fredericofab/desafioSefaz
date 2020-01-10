@@ -1,10 +1,13 @@
 package db;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Properties;
 
 public class DB {
 
@@ -12,17 +15,13 @@ public class DB {
 	
 	public static Connection getConexao() {
 		if (conexao == null) {
-			String driver = "oracle.jdbc.driver.OracleDriver";
-			String url = "jdbc:oracle:thin:@127.0.0.1:1521:dbfred";
-			String usuario = "JAVA";
-			String senha = "JAVA";
-
 			try {
-				Class.forName(driver);
+				Properties propriedades = lerPropriedades();
+				String url = propriedades.getProperty("url");
+				String usuario = propriedades.getProperty("usuario");
+				String senha = propriedades.getProperty("senha");
+				
 				conexao = DriverManager.getConnection(url, usuario, senha);
-			}
-			catch (ClassNotFoundException e) {
-				throw new DbException("Erro ao carregar driver " + e.getMessage());
 			}
 			catch (SQLException e) {
 				throw new DbException("Erro ao se conectar " + e.getMessage());
@@ -30,6 +29,8 @@ public class DB {
 		}
 		return conexao;
 	}
+	
+	
 	
 	public void fecharConexao() {
 		if (conexao != null) {
@@ -57,6 +58,18 @@ public class DB {
 		}
 		catch (SQLException e) {
 			throw new DbException("Erro ao Fechar ResultSet " + e.getMessage());
+		}
+	}
+	
+	private static Properties lerPropriedades() {
+		
+		try (FileInputStream fs = new FileInputStream("db.propriedades")){
+			Properties propriedades = new Properties();
+			propriedades.load(fs);
+			return propriedades;
+		}
+		catch (IOException e) {
+			throw new DbException(e.getMessage());
 		}
 	}
 }

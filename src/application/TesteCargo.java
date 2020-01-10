@@ -1,11 +1,11 @@
-package aplicacao;
+package application;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import dao.CargoDao;
-import dao.FabricaDeDao;
-import entidades.Cargo;
+import model.dao.CargoDao;
+import model.dao.DaoFabrica;
+import model.entities.Cargo;
 
 public class TesteCargo {
 
@@ -14,7 +14,7 @@ public class TesteCargo {
 		Integer codCargo;
 		Cargo cargo;
 		List<Cargo> lista = new ArrayList<Cargo>();
-		CargoDao cargoDao = FabricaDeDao.criarCargoDao();
+		CargoDao cargoDao = DaoFabrica.criarCargoDao();
 
 		System.out.println("colocar um Breakpoint Aqui");
 		

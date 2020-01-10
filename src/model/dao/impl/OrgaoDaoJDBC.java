@@ -1,4 +1,4 @@
-package dao.implementacao;
+package model.dao.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,10 +7,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import dao.OrgaoDao;
 import db.DB;
 import db.DbException;
-import entidades.Orgao;
+import model.dao.OrgaoDao;
+import model.entities.Orgao;
 
 public class OrgaoDaoJDBC implements OrgaoDao {
 
